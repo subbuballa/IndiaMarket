@@ -1,22 +1,22 @@
 [
 	{
-		id:"0"
-		name: "Puri"
+		"id":"0",
+		"name": "Puri"
 	},
 	{
-		id:"1",
-		name: "Dosa"
+		"id":"1",
+		"name": "Dosa"
 	},
 	{
-		id:"2",
-		name: "Masala Dosa"
+		"id":"2",
+		"name": "Masala Dosa"
 	},
 	{
-		id:"3",
-		name: "Masala Vada"
+		"id":"3",
+		"name": "Masala Vada"
 	},
 	{
-		id:"4",
-		name: "Mirchi Bajji"
+		"id":"4",
+		"name": "Mirchi Bajji"
 	}
 ]

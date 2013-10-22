@@ -4,11 +4,12 @@
 
 var mainControllers = angular.module('mainControllers', []);
 
-phonecatControllers.controller('ItemListCtrl', ['$scope', '$http',
+mainControllers.controller('ItemListCtrl', ['$scope', '$http',
   function ItemListCtrl($scope, $http) {
     $http.get('data/menu.json').success(function(data){
 		$scope.menuItems = data;
 	});
+	$scope.menutest = "one"
   }]);
 
 //Commented for the edit menu items
