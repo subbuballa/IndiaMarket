@@ -2,25 +2,23 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
+var indiaMarketApp = angular.module('indiaMarketApp', [
   'ngRoute',
-  'phonecatControllers',
-  'phonecatFilters',
-  'phonecatServices'
+  'mainControllers'
 ]);
 
-phonecatApp.config(['$routeProvider',
+indiaMarketApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
-      when('/phones', {
-        templateUrl: 'partials/phone-list.html',
-        controller: 'PhoneListCtrl'
+      when('/menu', {
+        templateUrl: 'partials/itemslist.html',
+        controller: 'ItemListCtrl'
       }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
+      when('/orderItems', {
+        templateUrl: 'partials/orderpage.html',
+        controller: 'ItemOrderCtrl'
       }).
       otherwise({
-        redirectTo: '/phones'
+        redirectTo: '/menu'
       });
   }]);

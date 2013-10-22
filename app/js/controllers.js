@@ -2,15 +2,17 @@
 
 /* Controllers */
 
-var phonecatControllers = angular.module('phonecatControllers', []);
+var mainControllers = angular.module('mainControllers', []);
 
-phonecatControllers.controller('PhoneListCtrl', ['$scope', 'Phone',
-  function($scope, Phone) {
-    $scope.phones = Phone.query();
-    $scope.orderProp = 'age';
+phonecatControllers.controller('ItemListCtrl', ['$scope', '$http',
+  function ItemListCtrl($scope, $http) {
+    $http.get('data/menu.json').success(function(data){
+		$scope.menuItems = data;
+	});
   }]);
 
-phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
+//Commented for the edit menu items
+/*phonecatControllers.controller('ItemOrderCtrl', ['$scope', '$routeParams', 'Phone',
   function($scope, $routeParams, Phone) {
     $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
       $scope.mainImageUrl = phone.images[0];
@@ -19,4 +21,4 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Ph
     $scope.setImage = function(imageUrl) {
       $scope.mainImageUrl = imageUrl;
     }
-  }]);
+  }]);*/
